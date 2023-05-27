@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>E_shop|Главная</title>
+</head>
+<body>
+
+{% for product in products %}
+      Название товара: <a href="/{{ product.id }}">{{ product.product_name }}</a><br><br>
+{% endfor %}
+{{% for category in categories %}
+Категории: <a href="{{ category.name }}">{{ category.name }}</a>
+{% endfor %}
+</body>
+</html>
